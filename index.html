@@ -189,17 +189,27 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script>
-  /* mobile menu toggle */
+  /* mobile menu toggle (fixed panel + scroll lock + close on link tap) */
   (function(){
     var nav = document.querySelector('.topnav');
     var btn = nav && nav.querySelector('.menu-toggle');
+    var links = nav && nav.querySelectorAll('.links a');
+    function setOpen(state){
+      if(!nav) return;
+      nav.classList.toggle('open', state);
+      document.body.classList.toggle('menu-open', state);
+      if(btn) btn.setAttribute('aria-expanded', state ? 'true' : 'false');
+    }
     if(btn){
       btn.addEventListener('click', function(){
-        var open = nav.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        setOpen(!nav.classList.contains('open'));
       });
     }
+    links && links.forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
   })();
   </script>
+
 </body>
 </html>
