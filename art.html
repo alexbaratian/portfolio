@@ -1,89 +1,90 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Art Portfolio</title>
-		<link rel="icon" href="favicon.png" type="image/x-icon" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art Portfolio</title>
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .work{ display:grid; grid-template-columns: minmax(260px, 720px) 1fr; gap: 18px; align-items:start; margin-bottom: 18px; }
+    .work figure{ margin:0; border:1px solid var(--border); border-radius: var(--radius); overflow:hidden; background: var(--card); }
+    .work img{ width:100%; height:auto; display:block; }
+    .work .meta{ border:1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; background: var(--card); }
+    .work .title{ font-weight:700; margin-bottom: 6px; }
+    .work .materials{ color: var(--muted); }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    /* Split nav: left "Back" + right links */
+    .topnav .navwrap { justify-content: space-between; }
+    @media (max-width: 900px){ .work{ grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="banner" role="img" aria-label="Header banner"></header>
+  
+  
+  <nav class="topnav" aria-label="Primary">
+    <div class="wrap navwrap">
+      <div class="links">
+        <a href="index.html">← Back to Main Page</a>
+      </div>
+      <div class="links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-				<!-- Header -->
-					<header id="header">
-						<a class="logo">Art Portfolio</a>
-					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Main Page</a></li>
-							<li class="active"><a href="generic.html">Art Portfolio</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/alexbaratian/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/alexbaratian" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+  <main class="wrap">
+    <h1>Art Portfolio</h1>
+    <p class="muted">A selection of my paintings and drawings.</p>
 
-				<!-- Main -->
-					<div id="main">
+    <section class="work">
+      <figure><img src="images/Piazzale Michelangelo.jpg" alt="Piazzale Michelangelo"></figure>
+      <div class="meta">
+        <div class="title">Piazzale Michelangelo</div>
+        <div class="materials">Watercolor, ink pen</div>
+      </div>
+    </section>
 
-						<!-- Post -->
-							<section class="post">
+    <section class="work">
+      <figure><img src="images/Top of the Rock.jpg" alt="Top of the Rock"></figure>
+      <div class="meta">
+        <div class="title">Top of the Rock</div>
+        <div class="materials">Pencils, ink pen</div>
+      </div>
+    </section>
 
-								<div class="image main"><img src="images/Piazzale Michelangelo.jpg" alt="" /></div>
-								<header class="major">
-									<p><strong>"Piazzale Michelangelo"</strong><br />
-										Watercolor, ink pen</p>
-								</header>
+    <section class="work">
+      <figure><img src="images/The Dome.jpg" alt="The Dome"></figure>
+      <div class="meta">
+        <div class="title">The Dome</div>
+        <div class="materials">Watercolor, ink pen</div>
+      </div>
+    </section>
 
-								<div class="image main"><img src="images/The Dome.jpg" alt="" /></div>
-								<header class="major">
-									<p><strong>"The Dome"</strong><br />
-										Watercolor, ink pen</p>
-								</header>
+    <section class="work">
+      <figure><img src="images/Chinatown.jpg" alt="San Francisco Chinatown"></figure>
+      <div class="meta">
+        <div class="title">San Francisco Chinatown</div>
+        <div class="materials">Watercolor, ink pen</div>
+      </div>
+    </section>
 
-								<div class="image main"><img src="images/Top of the Rock.jpg" alt="" /></div>
-								<header class="major">
-									<p><strong>"Top of the Rock"</strong><br />
-										Pencils, ink pen</p>
-								</header>
+    <section class="work">
+      <figure><img src="images/Woolworth Building.jpg" alt="Woolworth Building"></figure>
+      <div class="meta">
+        <div class="title">Woolworth Building</div>
+        <div class="materials">Watercolor, ink pen</div>
+      </div>
+    </section>
 
-								<div class="image main"><img src="images/Woolworth Building.jpg" alt="" /></div>
-								<header class="major">
-									<p><strong>"Woolworth Building"</strong><br />
-										Watercolor, ink pen</p>
-								</header>
-							</section>
-
-					</div>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Alex Baratian</li><li>Reference: HTML5 UP</li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  </main>
+  <footer class="foot"><div>© <span id="y"></span> Alex Baratian</div><div class="muted">Art Portfolio</div></footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hydrologic - Reducing water consumption in Champaign-Urbana</title>
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .meta{ color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .hero-title{ font-size: clamp(28px, 3.2vw, 40px); margin: 4px 0 6px; font-weight: 800; }
+    .subtitle{ color: var(--muted); font-size: 16px; margin: 0 0 14px; }
+    .prose p{ margin: 0 0 14px; }
+    .figure{ margin: 12px 0 18px; }
+    .figure img{ width:100%; height:auto; display:block; border:1px solid var(--border); border-radius: var(--radius); }
+    /* Subtle contributors section */
+    .contributors{ margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    .contributors .label{ font-weight: 600; color: var(--text); }
+    .contributors p{ margin: 6px 0; }
+
+    /* Split nav: left "Back" + right links */
+    .topnav .navwrap { justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <header class="banner" role="img" aria-label="Header banner"></header>
+  <nav class="topnav" aria-label="Primary">
+    <div class="wrap navwrap">
+      <div class="links">
+        <a href="index.html">← Back to Main Page</a>
+      </div>
+      <div class="links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div class="meta">April 2024</div>
+    <h1 class="hero-title">Hydrologic</h1>
+    <p class="subtitle">Reducing water consumption in Champaign-Urbana<br/>by developing smart water meters</p>
+
+    <figure class="figure">
+      <img src="images/hydro_5.jpg" alt="Hydrologic prototype installation">
+    </figure>
+
+    <section class="prose">
+      <p>Sustainable water management is key to mitigating excessive water consumption in Champaign-Urbana. There are several ways to approach this issue, including investing in water-efficient equipment, raising awareness among students and local residents about the importance of water conservation efforts, and designing closed water cycle systems. Any similar initiative would require the collection of compelling data that would highlight the areas that need to be addressed. Hence, building a comprehensive infrastructure to collect, store, and make sense of water consumption data is a logical foundational solution.</p>
+
+      <p>Hydrologic aims to design and implement cost-effective water meters that would gather data on how much water is used in showers. For a building complex, such as a college dormitory, aggregate data across all showers would enable the identification of general patterns in water usage, while additional analysis would make it possible to distinguish local trends between floors or buildings.</p>
+
+      <p>Ideally, this system would be updated regularly, ensuring early leakage detection or other issues with the showers by detecting any deviations from standard patterns. For example, if a shower is left on for a long time, the system would issue a warning notification to avoid problems such as flooding.</p>
+
+      <p>In April 2024, our team successfully installed Hydrologic's first prototype in Wardall Hall (one of the dormitories on campus), thanks to a collaboration with University Housing at UIUC.</p>
+    </section>
+
+    <section class="contributors">
+      <p><span class="label">Executive Manager:</span> Deepika Agrawal</p>
+      <p><span class="label">Project Managers:</span> Alex Baratian, Raj Amalakanti</p>
+      <p><span class="label">Project Fellows:</span> Bryan Chang, Cameron Obrecht, Neha Joseph, Dan Yang, Owen Wang, Amit Mathai, Eungi Youn</p>
+      <p><span class="label">Project Associates:</span> Sebastian Sovailescu, Sahan Yalavarthi, Aayush Desai, Gregorius Aviantoro, Ariana Mizan</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>© <span id="y"></span> Alex Baratian</div>
+    <div class="muted">Hydrologic</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
