@@ -26,6 +26,11 @@
   <header class="banner" role="img" aria-label="Header banner"></header>
   <nav class="topnav" aria-label="Primary">
     <div class="wrap navwrap">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"/>
+        </svg>
+      </button>
       <div class="links">
         <a href="index.html">← Back to Main Page</a>
       </div>
@@ -71,5 +76,19 @@
     <div class="muted">Hydrologic</div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script>
+  /* mobile menu toggle */
+  (function(){
+    var nav = document.querySelector('.topnav');
+    var btn = nav && nav.querySelector('.menu-toggle');
+    if(btn){
+      btn.addEventListener('click', function(){
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+  </script>
 </body>
 </html>

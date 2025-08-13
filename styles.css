@@ -110,3 +110,18 @@ h2{ font-size: 22px; margin: 24px 0 12px; }
 
 /* Remove vertical padding in nav for true centering */
 .topnav .wrap{padding-top:0;padding-bottom:0;}
+
+/* ===== Mobile nav (<=700px): hamburger drops a vertical list ===== */
+.menu-toggle{ display:none; width:36px; height:36px; align-items:center; justify-content:center;
+  border:1px solid var(--border); border-radius:8px; background:var(--pill); margin-right:auto; }
+.menu-toggle svg{ display:block; fill:currentColor; color:var(--text); }
+
+@media (max-width: 700px){
+  .navwrap{ justify-content:space-between; }
+  .menu-toggle{ display:flex; }
+  .topnav .links{
+    display:none; position:absolute; top:var(--nav-h); right:0; left:0; background:var(--card);
+    border-bottom:1px solid var(--border); padding:8px 16px; gap:8px;
+  }
+  .topnav.open .links{ display:flex; flex-direction:column; }
+  .topnav .links a{ height:auto; padding:6px 0; } /* bigger tap targets */}
