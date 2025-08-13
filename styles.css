@@ -126,7 +126,14 @@ h2{ font-size: 22px; margin: 24px 0 12px; }
     background-color: var(--card);
     backdrop-filter: none;
   }
-  .topnav.open .links{ display:flex; flex-direction:column; }
+  /* When open, stack BOTH .links groups with a solid bg (no absolute overlap) */
+  .topnav.open .navwrap{ flex-direction:column; align-items:stretch; }
+  .topnav.open .links{
+    display:flex; flex-direction:column;
+    position:static;               /* stop overlapping */
+    background:var(--card);        /* opaque */
+    border-bottom:1px solid var(--border);
+  }
   /* Force solid background when menu is open */
   .topnav.open { background-color: var(--card); backdrop-filter: none; }
   .topnav .links a{ height:auto; padding:6px 0; } /* bigger tap targets */}
