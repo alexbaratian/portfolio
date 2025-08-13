@@ -127,4 +127,6 @@ h2{ font-size: 22px; margin: 24px 0 12px; }
     backdrop-filter: none;
   }
   .topnav.open .links{ display:flex; flex-direction:column; }
+  /* Force solid background when menu is open */
+  .topnav.open { background-color: var(--card); backdrop-filter: none; }
   .topnav .links a{ height:auto; padding:6px 0; } /* bigger tap targets */}
